@@ -15,9 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('hello', function () {
-    return view('hello');
-});
+Route::view('/hello', 'hello');
 
 Route::get('users/{age?}', function ($age = 0) {
     return '<h1>возраст: ' . $age . '</h1>';
@@ -35,3 +33,7 @@ Route::prefix('number')->group(function () {
         return 'Two';
     });
 });
+
+//Route::fallback(function () {
+//    return 'Not Routes Found';
+//});
