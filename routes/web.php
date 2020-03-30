@@ -26,3 +26,12 @@ Route::get('users/{age?}', function ($age = 0) {
 Route::get('users/{username?}', function ($username = '') {
     return '<h1>Имя: ' . $username . '</h1>';
 })->where(['username' => '[A-Za-z]+'])->name('users.username');
+
+Route::prefix('number')->group(function () {
+    Route::get('one', function() {
+        return 'One';
+    });
+    Route::get('two', function() {
+        return 'Two';
+    });
+});
