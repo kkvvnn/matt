@@ -37,3 +37,6 @@ Route::prefix('number')->group(function () {
 //Route::fallback(function () {
 //    return 'Not Routes Found';
 //});
+
+Route::get('tasks/create', 'TasksController@create');
+Route::post('tasks', 'TasksController@store');
