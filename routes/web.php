@@ -16,13 +16,13 @@ Route::get('/', function () {
 });
 
 Route::get('hello', function () {
-    return 'Hello, World';
+    return view('hello');
 });
 
 Route::get('users/{age?}', function ($age = 0) {
     return '<h1>возраст: ' . $age . '</h1>';
-})->where(['age' => '[0-9]+']);
+})->where(['age' => '[0-9]+'])->name('users.age');
 
 Route::get('users/{username?}', function ($username = '') {
     return '<h1>Имя: ' . $username . '</h1>';
-})->where(['username' => '[A-Za-z]+']);
+})->where(['username' => '[A-Za-z]+'])->name('users.username');
