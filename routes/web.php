@@ -47,3 +47,4 @@ Route::get('blade', function () {
 });
 
 Route::view('dashboard', 'dashboard');
+Route::view('home', 'home');

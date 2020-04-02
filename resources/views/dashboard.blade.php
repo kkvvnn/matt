@@ -3,7 +3,9 @@
 @section('title', 'Dashboard')
 
 @section('content')
-    Welcome to your application dashboard!!
+    <p>Welcome to your application dashboard!!</p>
+
+    @include('sign-up-button', ['text' => 'BUTTON_DASHBOARD'])
 @endsection
 
 @section('footerScripts')
