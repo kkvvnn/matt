@@ -40,3 +40,10 @@ Route::prefix('number')->group(function () {
 
 Route::get('tasks/create', 'TasksController@create');
 Route::post('tasks', 'TasksController@store');
+
+Route::get('blade', function () {
+    $talks = ['one', 'two', 'three'];
+    return view('blade', ['talks' => $talks]);
+});
+
+Route::view('dashboard', 'dashboard');
